@@ -90,3 +90,5 @@ function main(){
   })
 }
 main();
+
+//by DeSqBlocki, credit goes to freeCodeCamp.org//
