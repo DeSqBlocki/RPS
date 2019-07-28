@@ -27,8 +27,12 @@ function win(userChoice, computerChoice) {
   const smallUser = "user".fontsize(3).sub().fontcolor("#08a108");
   const smallComp = "comp".fontsize(3).sub().fontcolor("#09469c");
   result_p.innerHTML = `${converter(userChoice)}${(smallUser)} beats ${converter(computerChoice)}${(smallComp)}. You Win!`;
-
+  document.getElementById(userChoice).classList.add('green-glow');
+  setTimeout(function() { document.getElementById(userChoice).classList.remove('green-glow') }, 1500);
 }
+
+
+
 function lose(userChoice, computerChoice) {
   computerScore++;
   userScore_span.innerHTML = userScore;
@@ -36,15 +40,16 @@ function lose(userChoice, computerChoice) {
   const smallUser = "user".fontsize(3).sub().fontcolor("#08a108");
   const smallComp = "comp".fontsize(3).sub().fontcolor("#09469c");
   result_p.innerHTML = `${converter(userChoice)}${(smallUser)} loses to ${converter(computerChoice)}${(smallComp)}. You Lost!`;
-
+  document.getElementById(userChoice).classList.add('red-glow');
+  setTimeout(function() { document.getElementById(userChoice).classList.remove('red-glow') }, 1500);
 
 }
 function draw(userChoice, computerChoice) {
-  const smallUser = "user".fontsize(3).fontcolor("#08a108").sup();
-  const smallComp = "comp".fontsize(3).fontcolor("#09469c").sup();
+  const smallUser = "user".fontsize(3).sub().fontcolor("#08a108");
+  const smallComp = "comp".fontsize(3).sub().fontcolor("#09469c");
   result_p.innerHTML = `${converter(userChoice)}${(smallUser)} equals to ${converter(computerChoice)}${(smallComp)}. It's a Draw!`;
-
-
+  document.getElementById(userChoice).classList.add('yellow-glow');
+  setTimeout(function() { document.getElementById(userChoice).classList.remove('yellow-glow') }, 1500);
 }
 
 
