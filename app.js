@@ -10,13 +10,13 @@ const scissors_div = document.getElementById("s");
 
 function getComputerChoice() {
   const choices = ['r', 'p', 's'];
-  const randomNumber = (Math.floor(Math.random() *3));
+  const randomNumber = Math.floor(Math.random() *3);
   return choices[randomNumber];
 }
 
 function converter(letter) {
   if (letter === "r") return "Rock";
-  if (letter === "P") return "Paper";
+  if (letter === "p") return "Paper";
   if (letter === "s") return "Scissors";
 }
 
